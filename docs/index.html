@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlantGuard AI — Plant Disease Detection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">🌿 PlantGuard AI</a>
+      <ul class="nav-links">
+        <li><a href="#detector">Detector</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#" id="chatbot-nav-btn">Kisan Assistant</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🤖 Powered by YOLOv11</div>
+      <h1 class="hero-heading">
+        Detect Plant Diseases<br />
+        <span class="gradient-text">In Seconds</span>
+      </h1>
+      <p class="hero-subtitle">
+        Upload a leaf photo and our AI instantly identifies diseases from 38 crop categories —
+        giving you actionable remedies to protect your harvest.
+      </p>
+      <a href="#detector" class="cta-btn">Start Detecting →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="leaf-emoji">🌿</div>
+      <div class="disease-card card-1">🍅 Tomato Blight</div>
+      <div class="disease-card card-2">🥔 Potato Late Blight</div>
+      <div class="disease-card card-3">🍇 Grape Black Rot</div>
+    </div>
+  </section>
+
+  <!-- ===== DETECTOR SECTION ===== -->
+  <section class="section" id="detector">
+    <div class="container">
+      <div class="section-title">
+        <h2>🔬 Disease Detector</h2>
+        <p>Upload a clear photo of a plant leaf to get instant AI diagnosis</p>
+      </div>
+
+      <!-- Upload Zone -->
+      <div class="upload-zone" id="dropZone">
+        <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        <h3>Drag &amp; Drop your leaf photo here</h3>
+        <p>or</p>
+        <label class="browse-btn" for="fileInput">Browse Files</label>
+        <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" hidden />
+        <p class="file-hint">Supports JPG, PNG, WEBP — max 10 MB</p>
+      </div>
+
+      <!-- Image Preview -->
+      <div class="preview-area" id="previewArea" style="display:none;">
+        <img id="previewImage" class="preview-img" src="" alt="Preview" />
+        <div class="preview-actions">
+          <button class="btn btn-primary" id="analyseBtn">🔍 Analyse</button>
+          <button class="btn btn-secondary" id="clearBtn">✕ Clear</button>
+        </div>
+      </div>
+
+      <!-- Loader -->
+      <div class="loader-area" id="loaderArea" style="display:none;">
+        <div class="loader-ring">
+          <div></div><div></div><div></div><div></div>
+        </div>
+        <p>Analysing your plant…</p>
+      </div>
+
+      <!-- Status Banner -->
+      <div class="status-banner" id="statusBanner" style="display:none;"></div>
+
+      <!-- Results Grid -->
+      <div class="results-grid" id="resultsGrid" style="display:none;">
+        <div class="result-card">
+          <span class="result-icon">🌿</span>
+          <span class="result-label">Plant</span>
+          <span class="result-value" id="resPlant">—</span>
+        </div>
+        <div class="result-card">
+          <span class="result-icon">🦠</span>
+          <span class="result-label">Disease</span>
+          <span class="result-value" id="resDisease">—</span>
+        </div>
+        <div class="result-card">
+          <span class="result-icon">📊</span>
+          <span class="result-label">Confidence</span>
+          <span class="result-value" id="resConfidence">—</span>
+        </div>
+      </div>
+
+      <!-- Remedy Card -->
+      <div class="remedy-card" id="remedyCard" style="display:none;">
+        <h3>💊 Recommended Remedy</h3>
+        <pre id="remedyText"></pre>
+      </div>
+
+      <!-- Top-5 Accordion -->
+      <div class="accordion" id="top5Accordion" style="display:none;">
+        <button class="accordion-btn" id="top5Btn">
+          📈 Top-5 Predictions <span id="accordionArrow">▼</span>
+        </button>
+        <div class="accordion-content" id="top5Content" style="display:none;">
+          <ul id="top5List"></ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div class="section-title">
+        <h2>⚙️ How It Works</h2>
+        <p>Three simple steps to protect your crops</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-emoji">📷</div>
+          <h3>Upload Photo</h3>
+          <p>Take a clear, well-lit photo of the affected leaf and upload it to the detector.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-emoji">🤖</div>
+          <h3>AI Analysis</h3>
+          <p>Our YOLOv11n model classifies the image against 38 PlantVillage disease categories.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-emoji">💊</div>
+          <h3>Get Remedy</h3>
+          <p>Receive instant, expert-backed treatment recommendations to save your crop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>🌿 <strong>PlantGuard AI</strong> — Built with YOLOv11n + FastAPI + PlantVillage Dataset</p>
+      <p>Helping farmers detect and treat plant diseases using AI</p>
+    </div>
+  </footer>
+
+  <!-- ===== CHATBOT ===== -->
+  <button class="chatbot-toggle" id="chatbotToggle" title="Kisan Assistant">🌾</button>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">🌱</div>
+        <div>
+          <div class="chat-title">Kisan Assistant</div>
+          <div class="chat-subtitle">Your agriculture advisor</div>
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-bubble bot">
+        👋 <strong>Namaste!</strong> I'm your Kisan Assistant.<br />
+        Ask me anything about farming, crops, diseases, fertilizers, or irrigation!
+      </div>
+      <div class="suggestions-row" id="suggestionsRow"></div>
+    </div>
+
+    <div class="chat-input-bar">
+      <input type="text" id="chatInput" placeholder="Ask about crops, fertilizers, pests…" />
+      <button class="chat-send" id="chatSend" title="Send">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
