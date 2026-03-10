@@ -1,5 +1,5 @@
 /* jshint esversion: 6 */
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://yolov11n-plant-diseasedetection.onrender.com";
 
 // ============================================================
 // Disease Detector
