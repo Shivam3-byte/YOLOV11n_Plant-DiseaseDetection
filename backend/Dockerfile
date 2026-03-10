@@ -2,6 +2,9 @@ FROM python:3.11-slim
 
 # Install system dependencies required by OpenCV
 
+
+//Helollo  ho ja
+
 # After (fixed):
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
