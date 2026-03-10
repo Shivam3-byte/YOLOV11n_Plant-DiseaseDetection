@@ -1,10 +1,10 @@
 """YOLOv11n-cls model loading and inference."""
-import os
 from pathlib import Path
 from PIL import Image
 
 _model = None
 WEIGHTS_PATH = Path(__file__).parent / "weights" / "best.pt"
+INFERENCE_IMG_SIZE = 224
 
 
 def _load_model():
@@ -26,7 +26,7 @@ def predict(image: Image.Image) -> dict:
     Returns a dict with keys: class_name, confidence, top5.
     """
     model = _load_model()
-    results = model.predict(image, imgsz=224, verbose=False)
+    results = model.predict(image, imgsz=INFERENCE_IMG_SIZE, verbose=False)
     result = results[0]
 
     # Classification results

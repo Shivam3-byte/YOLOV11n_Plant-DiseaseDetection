@@ -99,7 +99,10 @@ class ChatRequest(BaseModel):
 @app.post("/chat")
 async def chat(request: ChatRequest):
     """Match user message to chatbot knowledge base and return best answer."""
+    import re
     message_lower = request.message.lower().strip()
+    # Strip punctuation for more flexible greeting/keyword matching
+    message_clean = re.sub(r"[^\w\s]", "", message_lower)
 
     if not message_lower:
         raise HTTPException(status_code=400, detail="Message cannot be empty.")
@@ -107,7 +110,7 @@ async def chat(request: ChatRequest):
     # Check greetings
     greeting_patterns = _CHATBOT_DATA.get("greetings", {}).get("patterns", [])
     for pattern in greeting_patterns:
-        if pattern in message_lower:
+        if pattern in message_clean or pattern in message_lower:
             return {"response": _CHATBOT_DATA["greetings"]["response"]}
 
     # Match QA by keyword scoring

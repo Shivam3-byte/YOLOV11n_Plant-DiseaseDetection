@@ -26,6 +26,14 @@ let selectedFile = null;
 // Drop zone events
 dropZone.addEventListener("click", () => fileInput.click());
 
+// Keyboard accessibility for drop zone
+dropZone.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    fileInput.click();
+  }
+});
+
 dropZone.addEventListener("dragover", (e) => {
   e.preventDefault();
   dropZone.classList.add("drag-over");
@@ -49,7 +57,7 @@ fileInput.addEventListener("change", () => {
 function handleFile(file) {
   const allowed = ["image/jpeg", "image/png", "image/webp"];
   if (!allowed.includes(file.type)) {
-    alert("Unsupported file type. Please upload a JPG, PNG, or WEBP image.");
+    showUploadError("Unsupported file type. Please upload a JPG, PNG, or WEBP image.");
     return;
   }
   selectedFile = file;
@@ -61,6 +69,12 @@ function handleFile(file) {
     hideResults();
   };
   reader.readAsDataURL(file);
+}
+
+function showUploadError(message) {
+  statusBanner.style.display = "block";
+  statusBanner.className = "status-banner status-diseased";
+  statusBanner.textContent = `⚠️ ${message}`;
 }
 
 clearBtn.addEventListener("click", () => {
@@ -252,8 +266,13 @@ function scrollToBottom() {
 }
 
 function formatBotReply(text) {
+  // Escape HTML entities first to prevent XSS, then apply formatting
+  const escaped = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
   // Convert **bold** → <strong>, newlines → <br/>
-  return text
+  return escaped
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
     .replace(/\n/g, "<br/>");
 }
