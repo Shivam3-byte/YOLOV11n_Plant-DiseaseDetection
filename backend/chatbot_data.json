@@ -1,0 +1,69 @@
+{
+  "greetings": {
+    "patterns": ["hello", "hi", "hey", "namaste", "good morning", "good evening", "good afternoon", "howdy"],
+    "response": "🙏 **Namaste! I'm Kisan Assistant.**\n\nI'm here to help you with agriculture questions — crop diseases, fertilizers, irrigation, pest control, and much more.\n\nHow can I help you today? You can ask me about:\n• 🌾 Fertilizer recommendations\n• 🐛 Pest & disease control\n• 💧 Irrigation techniques\n• 🌱 Crop management"
+  },
+  "qa": [
+    {
+      "keywords": ["fertilizer", "wheat", "fertiliser"],
+      "question": "What fertilizer is best for wheat?",
+      "answer": "**Fertilizer Recommendations for Wheat:**\n\n• **Basal dose:** Apply 60 kg/ha of DAP (Di-Ammonium Phosphate) at sowing.\n• **Nitrogen:** Apply urea in 2 splits — half at sowing, half at first irrigation (CRI stage).\n• **Recommended NPK:** 120:60:40 kg/ha (N:P:K).\n• **Zinc:** If deficient, apply zinc sulfate @ 25 kg/ha.\n• **Organic:** Incorporate 5–10 tonnes/ha of FYM (Farm Yard Manure) before sowing.\n\n💡 *Always base fertilizer rates on soil test results for best results.*"
+    },
+    {
+      "keywords": ["summer", "crop", "kharif", "hot", "season"],
+      "question": "Which crops are best for summer season?",
+      "answer": "**Best Summer Season Crops:**\n\n☀️ **Vegetables:**\n• Okra (Bhindi), Bottle gourd, Ridge gourd, Bitter gourd\n• Watermelon, Muskmelon, Cucumber\n\n🌾 **Field Crops:**\n• Maize (Zaid), Groundnut, Sunflower\n• Moong bean, Cowpea (Lobia)\n\n🌿 **Tips:**\n• Ensure adequate irrigation as water demand is high.\n• Mulch to conserve soil moisture.\n• Sow early (Feb–March) to avoid peak summer heat during flowering."
+    },
+    {
+      "keywords": ["pest", "control", "rice", "paddy", "insect"],
+      "question": "How to control pests in rice/paddy?",
+      "answer": "**Rice Pest Control Guide:**\n\n🐛 **Common Pests & Control:**\n\n**Stem Borer:**\n• Apply cartap hydrochloride 4G granules @ 18 kg/ha at 25 DAT.\n• Use pheromone traps to monitor adult moths.\n\n**Brown Plant Hopper (BPH):**\n• Apply imidacloprid 17.8 SL @ 100 ml/ha.\n• Drain fields periodically to disrupt BPH habitat.\n\n**Leaf Folder:**\n• Apply chlorpyrifos 20 EC or quinalphos.\n\n🌿 **Organic options:** Neem-based pesticides (Azadirachtin 0.03%)\n\n💡 *Use integrated pest management (IPM) to reduce chemical use.*"
+    },
+    {
+      "keywords": ["irrigation", "wheat", "water", "schedule"],
+      "question": "When and how to irrigate wheat?",
+      "answer": "**Wheat Irrigation Schedule:**\n\n💧 **Critical Irrigation Stages (6 irrigations ideal):**\n\n1. **CRI stage** (Crown Root Initiation) — 20–25 DAS *(Most critical)*\n2. **Tillering** — 40–45 DAS\n3. **Jointing** — 60–65 DAS\n4. **Flowering** — 80–85 DAS *(Most critical)*\n5. **Milky stage** — 100–105 DAS\n6. **Dough stage** — 115–120 DAS\n\n🔑 **Key Tips:**\n• Avoid water stress at CRI and flowering stages.\n• Do NOT irrigate at grain filling — reduces quality.\n• Use furrow or flood irrigation (40–50 mm depth each time)."
+    },
+    {
+      "keywords": ["harvest", "rice", "paddy", "when"],
+      "question": "When is the right time to harvest rice?",
+      "answer": "**Rice Harvesting Guide:**\n\n📅 **Optimal Harvest Time:**\n• Harvest when **80–85% of panicles** are golden yellow.\n• Grain moisture content should be **20–25%** at harvest.\n• Typically 130–145 days after transplanting (varies by variety).\n\n✂️ **Harvesting Methods:**\n• **Manual:** Use sickles — harvest in the morning to reduce shattering losses.\n• **Mechanical:** Self-propelled combine harvesters are ideal for large fields.\n\n⚠️ **Avoid:**\n• Over-ripening causes severe grain shattering losses.\n• Harvesting when too wet increases milling breakage.\n\n💡 *Dry grains to 14% moisture for safe storage.*"
+    },
+    {
+      "keywords": ["tomato", "early blight", "blight", "fungal", "alternaria"],
+      "question": "How to treat tomato early blight?",
+      "answer": "**Tomato Early Blight Treatment:**\n\n🍅 **Identification:**\n• Dark brown concentric ring spots (target-like) on older leaves.\n• Yellowing around lesions; defoliation in severe cases.\n\n💊 **Chemical Control:**\n• Apply **chlorothalonil 75 WP** @ 2 g/litre OR\n• **Mancozeb 75 WP** @ 2.5 g/litre OR\n• **Azoxystrobin** for systemic protection.\n• Spray at 7–10 day intervals.\n\n🌿 **Organic Control:**\n• Neem oil (2%) spray every 7 days.\n• Copper hydroxide (Blitox) @ 3 g/litre.\n\n🛡️ **Prevention:**\n• Crop rotation, mulching, proper staking.\n• Avoid overhead irrigation."
+    },
+    {
+      "keywords": ["potato", "late blight", "phytophthora"],
+      "question": "How to manage potato late blight?",
+      "answer": "**Potato Late Blight Management:**\n\n🥔 **Identification:**\n• Water-soaked lesions on leaves turning dark brown.\n• White fungal growth on leaf undersides in humid conditions.\n• Tuber infection causes brown, granular rot.\n\n💊 **Chemical Control:**\n• Apply **Metalaxyl + Mancozeb** (Ridomil Gold) @ 2.5 g/litre preventively.\n• Use **cymoxanil + mancozeb** (Curzate) during active infection.\n• Spray every 5–7 days during cool, wet weather.\n\n🛡️ **Prevention:**\n• Plant certified seed potatoes.\n• Hilling reduces tuber infection.\n• Monitor weather forecast — spray before rain.\n• Destroy infected plant material completely."
+    },
+    {
+      "keywords": ["neem", "organic", "pesticide", "natural", "bio"],
+      "question": "How to make organic neem pesticide?",
+      "answer": "**Organic Neem Pesticide Preparation:**\n\n🌿 **Neem Oil Spray (2%):**\n• Mix 20 ml neem oil + 1 ml liquid soap (emulsifier) in 1 litre water.\n• Spray on leaves covering upper and lower surfaces.\n• Effective against aphids, whiteflies, thrips, fungal diseases.\n\n🌱 **Neem Leaf Extract:**\n• Boil 1 kg neem leaves in 5 litres water for 20 minutes.\n• Cool, strain, dilute 1:3 with water before spraying.\n\n🍵 **Neem Cake Soil Application:**\n• Apply neem cake @ 100–150 kg/ha in soil before planting.\n• Controls soil-borne pests and nematodes.\n\n💡 *Best applied in the evening; UV degrades neem oil quickly.*"
+    },
+    {
+      "keywords": ["soil", "test", "ph", "testing", "nutrient"],
+      "question": "How to do soil testing and what is ideal pH?",
+      "answer": "**Soil Testing Guide:**\n\n🧪 **How to Collect Soil Sample:**\n1. Collect 8–10 samples from different spots in the field (0–15 cm depth).\n2. Mix together thoroughly — take 500g representative sample.\n3. Send to nearest Soil Testing Laboratory (STL) or Krishi Vigyan Kendra (KVK).\n\n📊 **Ideal Soil pH by Crop:**\n• **Most crops:** 6.0–7.0\n• **Potato, strawberry:** 5.5–6.5\n• **Blueberry:** 4.5–5.5\n• **Sugarcane:** 6.0–8.0\n\n🔧 **pH Correction:**\n• **Too acidic:** Apply agricultural lime (CaCO₃) @ 2–4 tonnes/ha.\n• **Too alkaline:** Apply gypsum (CaSO₄) or sulfur @ 1–2 tonnes/ha.\n\n💡 *Soil testing every 2–3 years is recommended.*"
+    },
+    {
+      "keywords": ["powdery mildew", "powdery", "mildew", "white powder"],
+      "question": "How to control powdery mildew on crops?",
+      "answer": "**Powdery Mildew Control:**\n\n🍃 **Identification:**\n• White powdery coating on leaves, stems, and buds.\n• Leaves may curl, yellow, and drop prematurely.\n\n💊 **Chemical Control:**\n• **Sulfur-based:** Wettable sulfur 80 WP @ 3 g/litre.\n• **Systemic fungicides:** Triadimefon, hexaconazole, propiconazole.\n• **Potassium bicarbonate** (organic-approved) @ 4–5 g/litre.\n\n🌿 **Organic Control:**\n• Neem oil (2%) + liquid soap spray.\n• Baking soda (sodium bicarbonate) 1% solution.\n• Milk spray (40% milk in water) — proven effective!\n\n🛡️ **Prevention:**\n• Improve air circulation; avoid dense planting.\n• Do NOT over-apply nitrogen fertilizers."
+    },
+    {
+      "keywords": ["whitefly", "white fly", "control", "vector"],
+      "question": "How to control whitefly in vegetables?",
+      "answer": "**Whitefly Control in Vegetables:**\n\n🦟 **Identification:**\n• Tiny white winged insects clustering under leaves.\n• Leaves show yellowing, sticky honeydew, sooty mold.\n• Vectors for viruses (tomato yellow leaf curl, cassava mosaic).\n\n💊 **Chemical Control:**\n• **Imidacloprid 17.8 SL** @ 0.5 ml/litre (systemic).\n• **Thiamethoxam 25 WG** @ 0.4 g/litre.\n• Rotate insecticides to prevent resistance.\n\n🌿 **Non-chemical Control:**\n• **Yellow sticky traps** (10–15 per acre) to monitor and capture.\n• **Neem oil spray** (2%) at early infestation.\n• **Reflective silver mulch** repels whiteflies effectively.\n• Release **Encarsia formosa** (parasitic wasp) for biocontrol.\n\n💡 *Spray in the morning or evening for best coverage.*"
+    },
+    {
+      "keywords": ["drip", "irrigation", "micro", "water saving", "efficient"],
+      "question": "What are the benefits of drip irrigation?",
+      "answer": "**Drip Irrigation Benefits & Setup:**\n\n💧 **Key Benefits:**\n• **Water saving:** 30–50% less water than flood irrigation.\n• Delivers water directly to root zone — minimal evaporation.\n• Reduces weed growth by keeping inter-row areas dry.\n• Reduces fungal diseases (no wet foliage).\n• Enables fertigation (applying fertilizers through drip lines).\n\n🌾 **Best Suited For:**\n• Vegetables (tomato, chili, capsicum, onion)\n• Orchards (mango, pomegranate, grapes, citrus)\n• Sugarcane, cotton\n\n⚙️ **Components:**\n• Water source → Filter → Main line → Sub-main → Laterals → Drippers (2–4 LPH)\n\n💰 **Subsidies Available:**\n• Government of India provides 55–90% subsidy under PMKSY scheme for drip systems.\n\n💡 *Drip irrigation increases yield by 20–50% compared to flood irrigation.*"
+    }
+  ],
+  "fallback": "🤔 I don't have specific information about that topic yet.\n\n**Here's what I can help you with:**\n• 🌾 Fertilizer recommendations for crops\n• 🐛 Pest & disease identification and control\n• 💧 Irrigation scheduling and techniques\n• 🌱 Crop management best practices\n• 🧪 Soil health and pH management\n\nPlease try rephrasing your question, or ask one of the suggested questions above! 🙏"
+}
