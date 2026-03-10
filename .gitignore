@@ -13,8 +13,7 @@ build/
 venv/
 env/
 
-# Model weights (large binary, added manually after training)
-backend/weights/best.pt
+
 
 # IDE
 .vscode/
